@@ -1,11 +1,11 @@
 'use strict'
 
 app.controller 'MainCtrl', ['$scope', ($scope) ->
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate'
+    $scope.todoList = [
+      'build an angular app'
       'AngularJS'
-      'Karma'
-      ''
-      'Bower'
     ]
+
+    $scope.add= ->
+    	$scope.todoList.push $scope.newScope
 ]

@@ -15,19 +15,16 @@ describe 'Controller: MainCtrl', () ->
       $scope: scope
     }
   
-  it 'todo list toBeDefined', ->
+  it 'todoList to be defined', ->
     expect(scope.todoList).toBeDefined()
-  
 
-
-  it 'should attach a list of awesomeThings to the scope', ->
+  it 'should attach a list of todoList to the scope', ->
     expect(scope.todoList.length).toBe 2
   
-  it 'should attach a list of todoList to the scope', ->
-    scope.newElem= 'Bower'
-    score.add()
-    expect(scope.todoList[2]).toBe scope.newElem
-
+  it 'should add new task', ->
+    scope.newScope= 'Bower'
+    scope.add()
+    expect(scope.todoList[2]).toBe scope.newScope
 
   it 'should have cool task with index 1', ->
-    expect(todoList[1]).toBe "build an angular app"
+    expect(scope.todoList[0]).toBe "build an angular app"

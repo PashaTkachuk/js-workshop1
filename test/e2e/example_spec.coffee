@@ -9,14 +9,14 @@ describe "angularjs homepage", ->
     todoList = undefined
     beforeEach ->
       browser.get "/"
-      todoList = element.all(By.repeater("todo in todos"))
+      todoList = element.all(By.repeater("task in todoList"))
 
     it "should list todos", ->
       expect(todoList.count()).toEqual 2
-      expect(todoList.get(1).getText()).toEqual "build an angular app"
+      expect(todoList.get(0).getText()).toEqual "build an angular app"
 
     it "should add a todo", ->
-      addTodo = element(By.model("todoText"))
+      addTodo = element(By.model("newScope"))
       addButton = element(By.css("[value=\"add\"]"))
       addTodo.sendKeys "write a protractor test"
       addButton.click()

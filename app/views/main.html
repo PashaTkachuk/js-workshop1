@@ -1,3 +1,8 @@
 <ul>
-  <li ng-repeat="line in awesomeThings" ng-show="line.length">{{line}}</li>
+  <li ng-repeat="task in todoList">{{task}}</li>
 </ul>
+<input type="text" ng-model="newScope">
+<button ng-click="add()" value="add">Add</button>
+<hr>
+<input type="text" ng-model="yourName">
+<span>Hello {{yourName}}!</span>
