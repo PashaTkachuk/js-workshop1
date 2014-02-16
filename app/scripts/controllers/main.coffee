@@ -1,11 +1,8 @@
 'use strict'
 
-app.controller 'MainCtrl', ['$scope', ($scope) ->
-    $scope.todoList = [
-      'build an angular app'
-      'AngularJS'
-    ]
-
+app.controller 'MainCtrl', ['$scope', 'tasks', ($scope, tasks)->
+    $scope.todoList = tasks.list
+    
     $scope.add= ->
     	$scope.todoList.push $scope.newScope
 ]

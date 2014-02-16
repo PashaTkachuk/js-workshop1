@@ -13,6 +13,11 @@ describe 'Controller: MainCtrl', () ->
     scope = $rootScope.$new()
     MainCtrl = $controller 'MainCtrl', {
       $scope: scope
+      tasks: 
+        list: [
+          'build an angular app'
+          'AngularJS'
+        ]
     }
   
   it 'todoList to be defined', ->

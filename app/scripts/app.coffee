@@ -1,6 +1,7 @@
 'use strict'
 
 window.app = angular.module('devApp', [
+  'ngMockE2E',
   'ngResource',
   'ngSanitize',
   'ngRoute'
@@ -10,5 +11,9 @@ window.app = angular.module('devApp', [
       .when '/',
         templateUrl: 'views/main.html'
         controller: 'MainCtrl'
+        resolve: 
+          tasks: ['Tasks', (Tasks)->
+            Tasks.get().$promise
+          ]
       .otherwise
         redirectTo: '/'
